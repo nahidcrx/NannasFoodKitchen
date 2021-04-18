@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Base</title>
+    <link rel="stylesheet" href="{% static 'food/style.css' %}">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" crossorigin="anonymous">
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="{% url 'food:index' %}" class="navbar-brand">NannaFoodKitchen</a>
+        <div class="navbar">
+            <a href="{% url 'food:additem' %}" class="nav-item nav-link">Add Item</a>
+            <!-- <a href="#" class="nav-item nav-link">Delete Item</a>
+            <a href="#" class="nav-item nav-link">View Item</a> -->
+        </div>
+    </nav>
+
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
